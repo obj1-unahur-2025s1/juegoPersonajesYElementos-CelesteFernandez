@@ -1,9 +1,28 @@
-import example.pepita
+import personajes.*
 
-describe "group of tests for pepita" {
-
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+describe "tests para personajes" {
+  test "alturaCastillo" {
+    assert.equals(20, castillo.altura())
   }
 
+  test "alturaAurora" {
+    assert.equals(1, aurora.altura())
+  }
+
+  test "alturaTipa" {
+    assert.equals(8, tipa.altura())
+  }
+
+  test "modificaAlturaTipa" {
+    tipa.recibirTrabajo()
+    assert.equals(9, tipa.altura())
+  }
+
+  test "defensaCastillo" {
+    assert.equals(150, castillo.nivelDeDefensa())
+  }
+
+  test "auroraNaceViva" {
+    assert.equals(true, aurora.estaViva())
+  }
 }
